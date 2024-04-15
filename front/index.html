@@ -8,49 +8,48 @@
   <title>ReetrolOS</title>
 </head>
 <body>
-  <div id="imageContainer"></div>
+  <div class="image-container" id="imageContainer"></div>
   <div class="lowerbar">
     <div class="start-menu" id="startMenu">
-      <img src="../ressources/images/eyeee.png" alt="Start Menu Icon" id="startMenuIcon">
+      <img src="../ressources/images/eyeee.png" alt="Start Menu Icon" class="start-menu__icon" id="startMenuIcon">
     </div>
-    <div id="startMenuDropdown" class="dropdown-content">
-      <div class="menu-item">Item 1</div>
-      <div class="menu-item">Item 2</div>
+    <div class="start-menu__dropdown" id="startMenuDropdown">
+      <div class="start-menu__item">Item 1</div>
+      <div class="start-menu__item">Item 2</div>
     </div>
   </div>
   <div class="icon">
-    <img src="../ressources/images/folder.png" alt="Open Window Icon" id="openWindowIcon">
-    <span>musique\_0111000101</span>
+    <img src="../ressources/images/folder.png" alt="Open Window Icon" class="icon__image" id="openWindowIcon">
+    <span class="icon__text">musique\_0111000101</span>
   </div>
   <div class="window" id="draggableWindow" style="display: none;">
-  <div class="window-header">
-    <button class="close-window-button">X</button>
-  </div>
-  <div class="window-content">
-    musique
-  </div>
-</div>
-
-<div class="icon" id="livre">
-    <img src="../ressources/images/EyeballLivreOr.png" alt="Open Window Livre Icon" id="openWindowIconLivre">
-    <span>chat</span>
-</div>
-<div class="window" id="draggableWindowLivre" style="display: none;">
-    <div class="window-header">
-      <button class="close-window-button">X</button>
+    <div class="window__header">
+      <button class="window__close-button">X</button>
     </div>
-    <div class="window-content">
+    <div class="window__content">
+      musique
+    </div>
+  </div>
+
+  <div class="icon" id="livre">
+    <img src="../ressources/images/EyeballLivreOr.png" alt="Open Window Livre Icon" class="icon__image" id="openWindowIconLivre">
+    <span class="icon__text">chat</span>
+  </div>
+  <div class="window" id="draggableWindowLivre" style="display: none;">
+    <div class="window__header">
+      <button class="window__close-button">X</button>
+    </div>
+    <div class="window__content">
       <div class="message-list" style="overflow-y: scroll; height: 80%;">
         <!-- Les messages seront ajoutés ici -->
       </div>
       <!-- Utilisation d'un formulaire -->
       <form class="message-form" style="display: flex; justify-content: space-between; align-items: center; height: 20%; padding: 10px 0;">
-        <input type="text" class="message-input" style="flex-grow: 1;">
-        <button type="submit" class="send-button">Envoyer</button>
+        <input type="text" class="message-form__input" style="flex-grow: 1;">
+        <button type="submit" class="message-form__submit-button">Envoyer</button>
       </form>
     </div>
   </div>
-</div>
   <script src="js/fenetre.js"></script>
   <script src="js/demarrer.js"></script>
   <script src="js/addMessage.js"></script>

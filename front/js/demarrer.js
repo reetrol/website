@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     var startMenu = document.getElementById('startMenu');
-    var dropdown = document.getElementById('startMenuDropdown');
+    var startMenuDropdown = document.getElementById('startMenuDropdown');
 
     startMenu.addEventListener('click', function(event) {
-        dropdown.classList.toggle('show');
+        startMenuDropdown.classList.toggle('start-menu__dropdown--show');
         event.stopPropagation();
     });
 
     document.addEventListener('click', function(event) {
-        if (!dropdown.contains(event.target)) {
-            dropdown.classList.remove('show');
+        if (!startMenuDropdown.contains(event.target) && event.target !== startMenu) {
+            startMenuDropdown.classList.remove('start-menu__dropdown--show');
         }
     });
 });

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Récupérer les éléments du DOM
     const messageForm = document.querySelector(".message-form");
-    const messageInput = document.querySelector(".message-input");
+    const messageInput = document.querySelector(".message-form__input");
     const messageList = document.querySelector(".message-list");
 
     // Ajouter un événement de soumission au formulaire
