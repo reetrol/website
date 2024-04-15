@@ -1,12 +1,48 @@
 // Ouvrir et fermer les fenêtres
 document.getElementById('openWindowIcon').addEventListener('click', function() {
-  document.querySelector('.window#draggableWindow').style.display = 'block';
+  var window = document.querySelector('.window#draggableWindow');
+  var icon = document.getElementById('openWindowIcon');
+  window.style.display = 'block';
+  window.style.top = icon.offsetTop + 'px';
+  window.style.left = icon.offsetLeft + 'px';
+  var translateY = (window.innerHeight / 2 - icon.offsetTop) / window.innerHeight * 100;
+  var translateX = (window.innerWidth / 2 - icon.offsetLeft) / window.innerWidth * 100;
+  window.style.animation = `openWindow 0.5s forwards`;
+  window.style.animationTimingFunction = `ease`;
+  window.style.animationKeyframes = `
+    0% {
+      transform: scale(0) translate(0, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translate(${translateX}%, ${translateY}%);
+      opacity: 1;
+    }
+  `;
 });
 document.querySelectorAll('.window__close-button')[0].addEventListener('click', function() {
   document.querySelector('.window#draggableWindow').style.display = 'none';
 });
 document.getElementById('openWindowIconLivre').addEventListener('click', function() {
-  document.querySelector('.window#draggableWindowLivre').style.display = 'block';
+  var window = document.querySelector('.window#draggableWindowLivre');
+  var icon = document.getElementById('openWindowIconLivre');
+  window.style.display = 'block';
+  window.style.top = icon.offsetTop + 'px';
+  window.style.left = icon.offsetLeft + 'px';
+  var translateY = (window.innerHeight / 2 - icon.offsetTop) / window.innerHeight * 100;
+  var translateX = (window.innerWidth / 2 - icon.offsetLeft) / window.innerWidth * 100;
+  window.style.animation = `openWindow 0.5s forwards`;
+  window.style.animationTimingFunction = `ease`;
+  window.style.animationKeyframes = `
+    0% {
+      transform: scale(0) translate(0, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translate(${translateX}%, ${translateY}%);
+      opacity: 1;
+    }
+  `;
 });
 document.querySelectorAll('.window__close-button')[1].addEventListener('click', function() {
   document.querySelector('.window#draggableWindowLivre').style.display = 'none';

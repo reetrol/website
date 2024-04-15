@@ -115,6 +115,27 @@ html, body {
     pointer-events: none;
 }
 
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+
+
+  @keyframes openWindow {
+    0% {
+      transform: scale(0) translate(0, 0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translate(50%, 50%);
+      opacity: 1;
+    }
+  }
+
 .window {
     position: absolute;
     width: 500px;
@@ -124,6 +145,7 @@ html, body {
     z-index: 50;
     display: none;
     bottom: 0; /* Positionne la fenêtre en bas */
+    animation: openWindow 0.5s;
 }
 
 .window__header {
