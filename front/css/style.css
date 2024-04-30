@@ -6,6 +6,36 @@ html, body {
     background-color: #e6e6e6;
 }
 
+/* Bloc */
+.terminal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 9999;
+    font-size: 50px;
+}
+  
+  /* Élément */
+.terminal__animation {
+    /* Styles pour l'élément animation */
+}
+  
+.terminal__animation-text {
+    /* Styles pour l'élément de texte */
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    transition: transform 0.5s;
+}
+
 .image-container {
     position: absolute;
     top: 50%;
@@ -84,6 +114,12 @@ html, body {
     top: 5%;
     left: 5%;
     filter: hue-rotate(-45deg) saturate(500%)
+}
+
+#iconMusic {
+    position: relative;
+    left: 5%;
+    top: 5%;
 }
 
 #livre {

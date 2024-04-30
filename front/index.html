@@ -9,6 +9,11 @@
   <title>ReetrolOS</title>
 </head>
 <body>
+  <div class="terminal">
+    <div class="terminal__animation">
+      <pre class="terminal__animation-text"></pre>
+    </div>
+  </div>
   <div class="image-container" id="imageContainer"></div>
   <div class="lowerbar">
     <div class="start-menu" id="startMenu">
@@ -20,7 +25,7 @@
     </div>
   </div>
   <div class="icon">
-    <img src="../ressources/images/folder.png" alt="Open Window Icon" class="icon__image" id="openWindowIcon">
+    <img src="ressources/images/folder.png" alt="Open Window Icon" class="icon__image" id="openWindowIcon">
     <span class="icon__text">musique\_0111000101</span>
   </div>
   <div class="window" id="draggableWindow" style="display: none;">
@@ -28,12 +33,24 @@
       <button class="window__close-button">X</button>
     </div>
     <div class="window__content">
-      musique
+      <div class="icon" id="iconMusic">
+        <img src="ressources/images/favicon.png" alt="Open New Window Icon" class="icon__image">
+        <span class="icon__text">Ouvrir nouvelle fenêtre</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="draggableWindowMusic" style="display: none;">
+    <div class="window__header">
+      <button class="window__close-button">X</button>
+    </div>
+    <div class="window__content">
+      Contenu de la nouvelle fenêtre
     </div>
   </div>
 
   <div class="icon" id="livre">
-    <img src="../ressources/images/EyeballLivreOr.png" alt="Open Window Livre Icon" class="icon__image" id="openWindowIconLivre">
+    <img src="ressources/images/EyeballLivreOr.png" alt="Open Window Livre Icon" class="icon__image" id="openWindowIconLivre">
     <span class="icon__text">chat</span>
   </div>
   <div class="window" id="draggableWindowLivre" style="display: none;">
@@ -54,5 +71,6 @@
   <script src="js/fenetre.js"></script>
   <script src="js/demarrer.js"></script>
   <script src="js/addMessage.js"></script>
+  <script src="js/terminalAnimation.js"></script>
 </body>
 </html>

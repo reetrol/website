@@ -85,3 +85,30 @@ function makeWindowDraggable(window) {
       document.onmousemove = null;
   }
 }
+// // Ajouter un gestionnaire d'événements click pour l'icône de musique
+// document.getElementById('iconMusic').addEventListener('click', function() {
+//   var window = document.querySelector('.window#draggableWindowMusic');
+//   var icon = document.getElementById('iconMusic');
+//   window.style.display = 'block';
+//   window.style.top = icon.offsetTop + 'px';
+//   window.style.left = icon.offsetLeft + 'px';
+//   var translateY = (window.innerHeight / 2 - icon.offsetTop) / window.innerHeight * 100;
+//   var translateX = (window.innerWidth / 2 - icon.offsetLeft) / window.innerWidth * 100;
+//   window.style.animation = `openWindow 0.5s forwards`;
+//   window.style.animationTimingFunction = `ease`;
+//   window.style.animationKeyframes = `
+//     0% {
+//       transform: scale(0) translate(0, 0);
+//       opacity: 0;
+//     }
+//     100% {
+//       transform: scale(1) translate(${translateX}%, ${translateY}%);
+//       opacity: 1;
+//     }
+//   `;
+// });
+
+// // Ajouter un gestionnaire d'événements click pour le bouton de fermeture de la fenêtre de musique
+// document.querySelectorAll('.window__close-button')[2].addEventListener('click', function() {
+//   document.querySelector('.window#draggableWindowMusic').style.display = 'none';
+// });
