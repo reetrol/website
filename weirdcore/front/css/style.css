@@ -1,4 +1,50 @@
-html {
-    box-sizing: border-box;
-    font-size: 16px;
+body {
+    font-family: Arial, sans-serif;
+}
+  
+#title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#chat {
+margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+}
+
+#chat-log {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#drawing {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+#canvas {
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+#palette {
+    margin-top: 10px;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
 }
