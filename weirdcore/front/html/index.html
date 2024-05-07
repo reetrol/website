@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Reetrol</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <h1 id="title">Reetrol</h1>
-  <div id="chat">
-    <input id="pseudo" type="text" placeholder="Pseudo">
-    <input id="message" type="text" placeholder="Message">
-    <button id="send">Envoyer</button>
-    <div id="chat-log" style="height: 200px; overflow-y: auto;"></div>
-  </div>
-  <div id="drawing">
-    <canvas id="canvas" width="400" height="400" style="user-select: none;"></canvas>
-    <div id="palette">
-      <div class="color" style="background-color: red;"></div>
-      <div class="color" style="background-color: blue;"></div>
-      <div class="color" style="background-color: green;"></div>
-      <div class="color" style="background-color: yellow;"></div>
-      <div class="color" style="background-color: black;"></div>
-    </div>
-  </div>
-
-  <script src="../js/script.js"></script>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Fichier</a>
+                    <ul class="nav__submenu">
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">Imprimer</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">????</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Aide</a>
+                    <ul class="nav__submenu">
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">Aide?</a></li>
+                        <li class="nav__submenu-item"><a href="#" class="nav__submenu-link">Pourquoi?</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="left-square square"></div>
+        <div class="right-square square">
+            <h2 class="chat__title">Chat</h2>
+            <form class="chat__form">
+                <input type="text" id="pseudo" class="chat__input" placeholder="Pseudo">
+                <input type="text" id="message" class="chat__input" placeholder="Message">
+                <button id="send" class="chat__button">Envoyer</button>
+                <div id="chat-log" class="chat__log"></div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

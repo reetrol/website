@@ -1,50 +1,153 @@
+/* Variables */
+:root {
+  --primary-color: #3498db; /* Bleu */
+  --secondary-color: #f7f7f7; /* Gris clair */
+  --background-color: #fff; /* Blanc */
+  --text-color: #333; /* Noir */
+  --font-family: 'Segoe UI', Arial, sans-serif; /* Police pixélisée */
+}
+
+/* Header */
+.header {
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 body {
-    font-family: Arial, sans-serif;
-}
-  
-#title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-#chat {
-margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 300px;
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
 
-#chat-log {
-    padding: 10px;
-    border-top: 1px solid #ccc;
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-#drawing {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: 400px;
-    height: 400px;
+.nav__item {
+  position: relative;
+  margin-right: 20px;
 }
 
-#canvas {
-    border: 1px solid #ccc;
-    background-color: #fff;
+.nav__link {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 10px;
+  display: block;
+  font-family: var(--font-family);
+  font-size: 14px;
 }
 
-#palette {
-    margin-top: 10px;
+.nav__link:hover {
+  background-color: #ccc;
 }
 
-.color {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
+.nav__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--secondary-color);
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+.nav__submenu-item {
+  margin-bottom: 10px;
+  list-style: none; /* ajouter cette règle pour supprimer les puces */
+}
+
+.nav__submenu-link {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 10px;
+  display: block;
+  font-family: var(--font-family);
+  font-size: 14px;
+}
+
+.nav__submenu-link:hover {
+  background-color: #ccc;
+}
+
+.nav__item:hover >.nav__submenu {
+  display: block;
+}
+
+/* Squares */
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: var(--secondary-color);
+  border: 1px solid #ccc;
+}
+
+.left-square {
+  position: absolute;
+  top: 250px; /* décalage vers le bas pour ne plus dépasser la navbar */
+  left: 100px;
+}
+
+.right-square {
+  position: absolute;
+  top: 750px;
+  right: 100px;
+  padding: 20px;
+}
+
+/* Chat */
+.chat__title {
+  margin-top: 0;
+  font-family: var(--font-family);
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.chat__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0; /* pas de marge supérieure pour coller au chat log */
+}
+
+.chat__input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  font-family: var(--font-family);
+  font-size: 14px;
+}
+
+.chat__button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  font-family: var(--font-family);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chat__button:hover {
+  background-color: #2980b9;
+}
+
+.chat__log {
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: var(--secondary-color);
+  width: 100%; /* prendre la largeur maximale */
+  height: 150px; /* hauteur fixe pour afficher les messages */
+  overflow-y: auto; /* scrollbar vertical si nécessaire */
+  margin-bottom: 20px; /* espace entre le chat log et le formulaire */
 }
