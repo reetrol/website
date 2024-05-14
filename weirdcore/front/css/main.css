@@ -3,21 +3,40 @@
   font-family: 'MS';
   src: url('../ressources/font/MS\ Sans\ Serif.ttf') format('truetype');
 }
-:root{
-  --font-w-thin:100;
-  --font-w-light:300;
-  --font-w-regular:400;
-  --font-w-bold:800;
-  --fs-200:0.5vh;
-  --fs-300:1vh;
-  --fs-400:1.5vh;
-  --fs-500:2vh;
-  --fs-600:3vh;
-  --fs-700:4vh;
-  --fs-800:5vh;
-  --fs-900:6.5vh;
-  scroll-behavior:smooth;
-  --app-height:100%;
+:root {
+  /* Variables de taille de police */
+  --font-size-s: 1vh;
+  --font-size-m: 2vh;
+  --font-size-l: 3vh;
+  --font-size-xl: 4vh;
+  --font-size-xxl: 5vh;
+  --font-size-xxxl: 6vh;
+  --font-size-titre-m: 2.5vh;
+  --font-size-titre-l: 3vh;
+  --font-size-titre-xl: 3.5vh;
+  --font-size-titre-xxl: 4vh;
+  --font-size-titre-xxxl: 16vh;
+
+  /* Variables de poids de police */
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 800;
+
+  /* Autres variables de police */
+  --font-family-main: 'MS', sans-serif;
+
+  /* Variables de taille de ligne */
+  --line-height-small: 1.2;
+  --line-height-medium: 1.5;
+  --line-height-large: 1.8;
+
+  /* Autres variables de mise en forme du texte */
+  --text-color: #333;
+
+  --shadow-button: inset 2px 2px 0 rgb(255, 255, 255, 1), 
+                    2px 2px 0 rgba(0, 0, 0, 1); 
+
   --window-gradient: linear-gradient(to right, #7D8FBD, #BED2F9);
 }
 
@@ -27,17 +46,27 @@ ol,ul{
 
 html, body{
   font-family: 'MS', sans-serif;
+  font-size: 16px;
   margin: 0px;
   padding: 0px;
 }
 
+body{
+  background-image: url("../ressources/images/background_main.jpg");
+  background-size: cover;
+  image-rendering: pixelated;
+}
+
 .header{
+  z-index: 999;
   background: var(--window-gradient);
-  position: relative;
+  position: fixed;
   margin: 0px;
   border: 0px;
   padding: 7px;
-  height: 30px;
+  top:0;
+  left:0;
+  height: 40px;
   width: 100%;
 }
 
@@ -52,10 +81,9 @@ html, body{
 .header__button-style {
   background-color: #BFBFBF;
   border: none;
-  width: 100px;
-  height: 30px;
-  box-shadow: inset 2px 2px 0 rgb(255, 255, 255, 1), 
-              2px 2px 0 rgba(0, 0, 0, 1); 
+  width: 140px;
+  height: 40px;
+  box-shadow: var(--shadow-button);
   margin-right: 7px;
 }
 
@@ -65,7 +93,7 @@ html, body{
 
 .header__button-text {
   font-family: 'MS', sans-serif;
-  font-size: 17px;
+  font-size: 30px;
 }
 
 .header__dropdown-content {
@@ -79,8 +107,8 @@ html, body{
   background-color: #BFBFBF;
   margin-top: 7px;
   width: 150px;
-  box-shadow: inset 2px 2px 0 rgb(255, 255, 255, 1), 
-              2px 2px 0 rgba(0, 0, 0, 1); 
+  box-shadow: var(--shadow-button);
+  z-index: 999;
 }
 
 .header__dropdown-content-link {
@@ -94,7 +122,106 @@ html, body{
   background-color: #AFAFAF;
 }
 
-.gamberge__texte{
+.content {
+  position: relative;
+  margin-top: 54px;
+  width: 100vw;
+  height: 300vh;
+  overflow: hidden;
+}
+
+@keyframes glow{
+  from{text-shadow:0px 0px 5px #fff,0px 0px 5px #3451f7;}
+  to{text-shadow:0px 0px 20px #fff,0px 0px 40px #3451f7;}
+}
+
+.title {
+  left:2%;
+  top:1%;
+  margin:0;
   position: absolute;
-  margin-top: 1000px;
+  font-size: 8vw;
+  color:white;
+  animation-name:glow;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
+}
+
+.text__intro {
+  left: 40%;
+  top:16%;
+  position: absolute;
+  width:35%;
+  font-size: 2vw;
+  color:rgb(0, 0, 0);
+  text-shadow: 2px 2px 0px #fff;
+}
+
+.image__top-hands {
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  max-width: 15%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.window__surveillance {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  height: 400px;
+  width: 400px;
+  box-shadow: var(--shadow-button);
+}
+
+.window__surveillance-header {
+  width: 100%;
+  height:40px;
+  padding:7px 0 7px 0;
+  position:absolute;
+  background: var(--window-gradient);
+  z-index: 0;
+  display:grid;
+  align-items: center;
+}
+
+.window__surveillance-titre {
+  font-size: 2vw;
+}
+
+.window__surveillance-button-help {
+  position: absolute;
+  right: 0;
+  font-family: "MS", sans-serif;
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  background: #BFBFBF;
+  border: none;
+  box-shadow: var(--shadow-button);
+  z-index: 999;
+}
+
+.window__surveillance-button-help:hover {
+  background: #AFAFAF;
+}
+
+.window__surveillance-content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 998;
+}
+
+.window__surveillance-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
