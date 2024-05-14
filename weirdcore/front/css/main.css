@@ -184,6 +184,7 @@ body{
   padding:7px 0 7px 0;
   position:absolute;
   background: var(--window-gradient);
+  box-shadow: var(--shadow-button);
   z-index: 0;
   display:grid;
   align-items: center;
@@ -191,13 +192,17 @@ body{
 
 .window__surveillance-titre {
   font-size: 2vw;
+  position: absolute;
+  left: 10px;
 }
 
 .window__surveillance-button-help {
   position: absolute;
-  right: 0;
+  right: 5px;
+  vertical-align: middle;
   font-family: "MS", sans-serif;
-  font-size: 25px;
+  text-align: center;
+  font-size: 30px;
   width: 40px;
   height: 40px;
   background: #BFBFBF;
@@ -214,14 +219,22 @@ body{
   position: absolute;
   top: 50px;
   width: 100%;
-  height: 100%;
-  background: #fff;
+  height: 350px;
   z-index: 998;
 }
 
+#scene__surveillance {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* 
 .window__surveillance-image {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
