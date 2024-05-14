@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'MS';
+  src: url('../ressources/font/MS\ Sans\ Serif.ttf') format('truetype');
+}
+:root{
+  --font-w-thin:100;
+  --font-w-light:300;
+  --font-w-regular:400;
+  --font-w-bold:800;
+  --fs-200:0.5vh;
+  --fs-300:1vh;
+  --fs-400:1.5vh;
+  --fs-500:2vh;
+  --fs-600:3vh;
+  --fs-700:4vh;
+  --fs-800:5vh;
+  --fs-900:6.5vh;
+  scroll-behavior:smooth;
+  --app-height:100%;
+  --window-gradient: linear-gradient(to right, #7D8FBD, #BED2F9);
+}
+
+ol,ul{
+  list-style:none
+}
+
+html, body{
+  font-family: 'MS', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header{
+  background: var(--window-gradient);
+  position: relative;
+  margin: 0px;
+  border: 0px;
+  padding: 7px;
+  height: 30px;
+  width: 100%;
+}
+
+.header__buttons{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.header__button-style {
+  background-color: #BFBFBF;
+  border: none;
+  width: 100px;
+  height: 30px;
+  box-shadow: inset 2px 2px 0 rgb(255, 255, 255, 1), 
+              2px 2px 0 rgba(0, 0, 0, 1); 
+  margin-right: 7px;
+}
+
+.header__button-style:hover {
+  background-color: #AFAFAF;
+}
+
+.header__button-text {
+  font-family: 'MS', sans-serif;
+  font-size: 17px;
+}
+
+.header__dropdown-content {
+  display: none;
+  position:absolute;
+}
+
+.header__dropdown-content.show {
+  padding:5px;
+  display: block;
+  background-color: #BFBFBF;
+  margin-top: 7px;
+  width: 150px;
+  box-shadow: inset 2px 2px 0 rgb(255, 255, 255, 1), 
+              2px 2px 0 rgba(0, 0, 0, 1); 
+}
+
+.header__dropdown-content-link {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #000;
+}
+
+.header__dropdown-content-link:hover {
+  background-color: #AFAFAF;
+}
+
+.gamberge__texte{
+  position: absolute;
+  margin-top: 1000px;
+}
