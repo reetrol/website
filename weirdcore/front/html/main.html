@@ -28,16 +28,17 @@
         </button>
         <div class="header__dropdown-content">
           <a class="header__dropdown-content-link" href="#">imprimer</a>
-          <a class="header__dropdown-content-link" href="#">faire</a>
+          <a class="header__dropdown-content-link" href="#">gamberger</a>
         </div>
       </li>
       <li class="header__button">
         <button class="header__button-style">
-          <span class="header__button-text">2dition</span>
+          <span class="header__button-text">naviguer</span>
         </button>
         <div class="header__dropdown-content">
-          <a class="header__dropdown-content-link" href="#">copier</a>
-          <a class="header__dropdown-content-link" href="#">coller</a>
+          <a class="header__dropdown-content-link" href="#">accueil</a>
+          <a class="header__dropdown-content-link" href="#">truc</a>
+          <a class="header__dropdown-content-link" href="#">truc2</a>
         </div>
       </li>
       <li class="header__button">
@@ -61,9 +62,9 @@
     </ul>
   </header>
   <div class="content">
-    <h1 class="title">REETROL</h1>
+    <img class="title" src="../ressources/images/logo.png" alt="c mon logo ^^">
 
-    <p class="text__intro">vous etes bien arriv2 sur mon <a href="#">site internet</a>
+    <p class="text__intro">vous etes bien arrive sur mon <a href="#">site internet</a>
       <br>
       je suis reetrol, j'ai 23 ans et j'hbite à montpellier <br>
       je fais de la musique !!! vous pouvez même l'écouter ici si vous voulez..............
@@ -77,20 +78,32 @@
     <section class="window__surveillance">
       <div class="window__surveillance-header">
         <span class="window__surveillance-titre">surveillance devices</span>
-        <button class="window__surveillance-button-help">?</button>
+        <button class="window__surveillance-button" id="help__surveillance-button">?</button>
       </div>
       <div class="window__surveillance-content">
         <div id="scene__surveillance"></div>
-        <!-- <img class="window__surveillance-image" src="../ressources/images/camera.png" alt="image de surveillance"> -->
       </div>
     </section>
+  <div class="help__surveillance">
+    <div class="window__surveillance-header">
+      <span class="window__surveillance-titre">quel bordel... ou est-ce que je suis...</span>
+      <button class="window__surveillance-button" id="close-help__surveillance-button">X</button>
+    </div>
+    <div class="help__surveillance-content">
+      <p class="help__surveillance-text">c'est des petites cameras que j'ai faites avec blender un peu au hasard !!
+        c'est rigolo hein !
+        Tu peux les faire pivoter avec ton clic gauche, les déplacer avec ton clic droit, et zoomer avec ta molette
+      </p>
+    </div>
 
 
 
   </div>
   
-  <script type="text/javascript" src="../js/dropdown.js"></script>
+  <script type="module" src="../js/dropdown.js"></script>
   <script type="module" src="../js/camera.js"></script>"
+  <script type="module" src="../js/camera_help.js"></script>
+  <script type="module" src="../js/draggable_windows.js"></script>
 </body>
 
 </html>
