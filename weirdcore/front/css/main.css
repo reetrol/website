@@ -75,6 +75,7 @@ body{
 .header__button-text {
   font-family: 'MS', sans-serif;
   font-size: 30px;
+  color: #000000;
 }
 
 .header__dropdown-content {
