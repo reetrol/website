@@ -45,15 +45,18 @@ body{
   left:0;
   right:0;
   position:relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .header__buttons{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin: 0px;
   padding: 0px;
 }
+
 
 .header__button{
   position: static;
@@ -112,8 +115,8 @@ body{
 }
 
 @keyframes glow{
-  from{filter:drop-shadow(0px 0px 5px #d4e6ff) saturate(2.5) hue-rotate(40deg);}
-  to{filter:drop-shadow(0px 0px 20px #d4e6ff) saturate(1) hue-rotate(5deg);}
+  from{filter:drop-shadow(0px 0px 5px #d4e6ff) saturate(1) brightness(1) }
+  to{filter:drop-shadow(0px 0px 20px #d4e6ff) saturate(1) brightness(2) }
 }
 
 .title {
@@ -131,10 +134,10 @@ body{
 .text__intro {
   left: calc(5% + 400px + 40px);
   max-width: calc(100% - (5% + 400px + 40px));
-  top:320px;
+  top:250px;
   position: absolute;
   margin:0;
-  width:50%;
+  width:70%;
   font-size: 5vh;
   color:rgb(0, 0, 0);
   text-shadow: 2px 2px 0px #fff;
@@ -154,7 +157,7 @@ body{
 .window__surveillance {
   position: absolute;
   left: 5%;
-  top:300px;
+  top:230px;
   height: 400px;
   width: 400px;
   box-shadow: var(--shadow-button-bigger);

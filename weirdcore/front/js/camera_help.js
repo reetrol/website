@@ -26,9 +26,9 @@ function adjustWindowSurveillancePosition() {
       const textIntroTop = textIntro.offsetTop;
       windowSurveillance.style.top = `${textIntroTop + textIntroHeight + 50}px`;
     } else {
-      windowSurveillance.style.top = '300px'; // ou autre valeur par défaut
+      windowSurveillance.style.top = '230px'; // ou autre valeur par défaut
     }
   }
   
-  window.addEventListener('resize', adjustWindowSurveillancePosition);
-  adjustWindowSurveillancePosition(); // exécute la fonction une fois que le document est chargé
+window.addEventListener('resize', adjustWindowSurveillancePosition);
+adjustWindowSurveillancePosition(); // exécute la fonction une fois que le document est chargé
