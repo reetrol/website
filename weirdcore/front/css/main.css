@@ -350,6 +350,7 @@ body{
 @media screen and (max-width: 647px) {
   .text__intro {
     left:5%;
+    font-size: 20px;
     top: 140px;
     max-width:90%;
     width: auto;
@@ -359,9 +360,12 @@ body{
     display: none;
   }
   .title {
-    width: 300px;
+    max-width: 300px;
+    min-width: 210px;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
+    text-align: center;
   }
 
   .help__surveillance.show {
@@ -374,7 +378,42 @@ body{
   .window__surveillance {
     left: 50%;
     transform: translateX(-50%);
-    width: 90vw;
-    height: 90vw;
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .window__surveillance-header {
+    display:flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .window__surveillance-titre {
+    font-size: 20px;
+    overflow: hidden;
+    white-space: normal; /* permet au texte de sauter à la ligne */
+    text-overflow: clip;
+  }
+  .help__surveillance-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .header__button-text {
+    font-size: 20px;
+  }
+
+  .header__button-style {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+  }
+
+  .header__dropdown-content-link {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .header__dropdown-content.show {
+    min-width: 80px;
+    margin-left: 5px;
   }
 }
