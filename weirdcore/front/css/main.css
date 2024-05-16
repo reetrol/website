@@ -26,20 +26,22 @@ html, body{
   font-size: 16px;
   margin: 0px;
   padding: 0px;
+
 }
 
 body{
   background-image: url("../ressources/images/background_main.jpg");
   background-size: cover;
   image-rendering: pixelated;
+  overflow-x: hidden;
 }
 
 .header{
   z-index: 999;
   background: var(--window-gradient);
-  padding: 7px;
   max-height: 200px;
   top:0;
+  width:100%;
   left:0;
   right:0;
   position:relative;
@@ -96,7 +98,7 @@ body{
   padding: 5px;
   font-size: 30px;
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 .header__dropdown-content-link:hover {
@@ -117,7 +119,8 @@ body{
   left:5%;
   top:50px;
   position: absolute;
-  width:500px;
+  width: calc(100% - 170px - 50px);
+  max-width: 700px;
   animation-name:glow;
   animation-duration:1s;
   animation-iteration-count:infinite;
@@ -126,8 +129,10 @@ body{
 
 .text__intro {
   left: calc(5% + 400px + 40px);
-  top:270px;
+  max-width: calc(100% - (5% + 400px + 40px));
+  top:320px;
   position: absolute;
+  margin:0;
   width:50%;
   font-size: 5vh;
   color:rgb(0, 0, 0);
@@ -138,12 +143,12 @@ body{
   position: absolute;
   top: 20px;
   right:20px;
-  width: 150px;
+  width: 120px;
+  max-width: 150px;
   height: auto;
   object-fit: cover;
   z-index: -1;
 }
-
 
 .window__surveillance {
   position: absolute;
@@ -191,6 +196,7 @@ body{
   border: none;
   box-shadow: var(--shadow-button);
   z-index: 999;
+  color:#000000;
 }
 
 .window__surveillance-button:hover {
@@ -308,11 +314,15 @@ body{
 .container__butterfly {
   position:absolute;
   bottom:0;
+  width: 50vw;
+  height:50vh;
   z-index: 99999;
   overflow: hidden;
 }
 
 .butterfly {
+  width:100%;
+  height: 100%;
   filter: brightness(1000) drop-shadow(0 0 30px blue) blur(2px);
   filter: radial-gradient(farthest-corner, rgba(0,0,0,0) 70%, rgba(0,0,0,0.5) 100%) blur(10px);
 }
@@ -330,4 +340,27 @@ body{
 
 .star {
   position: absolute;
+}
+
+
+
+
+
+
+@media screen and (max-width: 647px) {
+  .text__intro {
+    left:5%;
+    top: 170px;
+    max-width:90%;
+    width: auto;
+  }
+
+  .image__top-hands {
+    display: none;
+  }
+  .title {
+    width: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

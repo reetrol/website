@@ -16,3 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+const textIntro = document.querySelector('.text__intro');
+const windowSurveillance = document.querySelector('.window__surveillance');
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 647) {
+    const textIntroHeight = textIntro.offsetHeight;
+    const textIntroTop = textIntro.offsetTop;
+    windowSurveillance.style.top = `${textIntroTop + textIntroHeight + 50}px`;
+  } else {
+    windowSurveillance.style.top = '300px'; // ou autre valeur par défaut
+  }
+});
