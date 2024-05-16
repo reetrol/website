@@ -350,7 +350,7 @@ body{
 @media screen and (max-width: 647px) {
   .text__intro {
     left:5%;
-    top: 170px;
+    top: 140px;
     max-width:90%;
     width: auto;
   }
@@ -359,8 +359,22 @@ body{
     display: none;
   }
   .title {
-    width: 450px;
+    width: 300px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .help__surveillance.show {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    top: 650px!important;
+  }
+
+  .window__surveillance {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    height: 90vw;
   }
 }
