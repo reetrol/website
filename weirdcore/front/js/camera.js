@@ -7,7 +7,6 @@ renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 const surveillance_window = document.getElementById('scene__surveillance');
 
-console.log(surveillance_window)
 
 renderer.setSize(surveillance_window.innerWidth, surveillance_window.innerHeight);
 renderer.setClearColor(0x000000);

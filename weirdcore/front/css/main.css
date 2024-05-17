@@ -207,6 +207,10 @@ body{
   background: #AFAFAF;
 }
 
+#reset__surveillance-button {
+  right: 50px;
+}
+
 .window__surveillance-content {
   position: absolute;
   width:100%;
@@ -226,13 +230,14 @@ body{
   top:50vh;
   left:20vw;
   width: 700px;
-  height: 450px;
+  height:300px;
   z-index: 999;
   box-shadow: var(--shadow-button-bigger);
 }
 
 .help__surveillance-content{
   position: absolute;
+  overflow-y: scroll;
   width:100%;
   top: 54px;
   bottom:0;
@@ -280,7 +285,7 @@ body{
 
 /* Bruit statique */
 #scene__surveillance::after {
-  background: url("../ressources/images/noise.jpg"); /* Remplacez par l'URL de votre image de bruit */
+  background: url("../ressources/images/noise.jpg");
   opacity: 0.05;
   animation: noise 2s infinite linear;
 }
@@ -346,7 +351,173 @@ body{
   position: absolute;
 }
 
+.container__music {
+  position: absolute;
+  left: 5%;
+  top:1000px;
+  height: 700px;
+  width: 400px;
+  box-shadow: var(--shadow-button-bigger);
+}
 
+.music__header{
+  display:flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height:40px;
+  padding:7px 0 7px 0;
+  position:absolute;
+  background: var(--window-gradient);
+  box-shadow: var(--shadow-button);
+  z-index: 0;
+  display:grid;
+  align-items: center;
+  user-select: none;
+}
+
+.music__titre {
+  font-size: 30px;
+  position: absolute;
+  left: 10px;
+  user-select: none;
+}
+
+.music__content {
+  position: absolute;
+  top: 54px;
+  left: 0;
+  width: 100%;
+  bottom:0;
+  background: #a9beec;
+  display:flex;
+  flex-direction: column;
+}
+
+.music__player {
+  display: none;
+}
+
+.music__visualizer{
+  top:0;
+  height: 50%;
+  width: 100%;
+  border-top:5px #000000 solid;
+  border-bottom:5px #000000 solid;
+}
+
+.img__visualizer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.music__control {
+  width:100%;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  gap:20px;
+}
+
+.music__button-control{
+  width: 80px;
+  height: 40px;
+  background: #BFBFBF;
+  border: none;
+  box-shadow: var(--shadow-button);
+  margin-top:5px;
+  margin-bottom: 5px;
+  font-family: 'MS', sans-serif;
+  font-size: 18px;
+  
+}
+
+#music__button-playpause{
+  width: 100px;
+  font-size: 25px;
+}
+
+.music__button-control:hover{
+  background: #AFAFAF;
+}
+
+.container__music-category{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px #000000 solid;
+  box-shadow: var(--shadow-button);
+  background: var(--window-gradient);
+}
+
+.music__button-category-style{
+  width: 300px;
+  background-color: #BFBFBF;
+  border: none;
+  height: 40px;
+  box-shadow: var(--shadow-button);
+  margin: 7px;
+}
+.music__button-category-style:hover{
+  background-color: #AFAFAF;
+}
+
+.music__button-category-text{
+  font-size: 25px;
+}
+
+.music__dropdown-content{
+  width: 300px;
+  position: absolute;
+  display: block;
+  background-color: #BFBFBF;
+  min-width: 100px;
+  box-shadow: var(--shadow-button);
+  z-index: 999;
+  margin-left:7px;
+  display:none;
+}
+
+.music__dropdown-content.show{
+  display: block;
+}
+
+.music__dropdown-content-link {
+  font-size: 23px;
+}
+
+.container__music-list{
+  left:0;
+  bottom:0;
+  margin-top:2px;
+  overflow-y:scroll;
+}
+
+.music__list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding-left: 0;
+}
+
+.music__list-item {
+  height: 20px;
+  width:inherit;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font-size: 19px;
+  background: linear-gradient(to right, #7D8FBD, #BED2F9);
+  box-shadow: var(--shadow-button);
+  margin:10px;
+  cursor: default;
+}
+
+.music__list-item:hover {
+  background: linear-gradient(to right, #6b95ee, #ffffff);
+}
 
 
 
@@ -365,7 +536,7 @@ body{
   }
   .title {
     max-width: 300px;
-    min-width: 210px;
+    min-width: 270px;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -394,7 +565,7 @@ body{
   .window__surveillance-titre {
     font-size: 20px;
     overflow: hidden;
-    white-space: normal; /* permet au texte de sauter à la ligne */
+    white-space: normal;
     text-overflow: clip;
   }
   .help__surveillance-text {
@@ -419,5 +590,9 @@ body{
   .header__dropdown-content.show {
     min-width: 80px;
     margin-left: 5px;
+  }
+
+  .music__button-category-style{
+    width: 300px;
   }
 }

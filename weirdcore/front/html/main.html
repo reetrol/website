@@ -81,10 +81,11 @@
      </p>
     <img class="image__top-hands" src="../ressources/images/hands.jpeg" alt="image de mains qui gambergent">
 
-    <section class="window__surveillance">
+    <section class="window__surveillance" id="window__surveillance-scene">
       <div class="window__surveillance-header">
         <span class="window__surveillance-titre">surveillance devices</span>
         <button class="window__surveillance-button" id="help__surveillance-button">?</button>
+        <button class="window__surveillance-button" id="reset__surveillance-button">@</button>
       </div>
       <div class="window__surveillance-content">
         <div id="scene__surveillance"></div>
@@ -97,8 +98,10 @@
       </div>
       <div class="help__surveillance-content">
         <p class="help__surveillance-text">c'est des petites cameras que j'ai faites avec blender un peu au hasard !!
-          c'est rigolo hein !
-          Tu peux les faire pivoter avec ton clic gauche, les déplacer avec ton clic droit, et zoomer avec ta molette
+          c'est rigolo hein !<br>
+          Tu peux les faire pivoter avec ton clic gauche, les déplacer avec ton clic droit, et zoomer avec ta molette .<br><br>
+          Tu peux aussi déplacer la fenetre pour la mettre ou tu veux !! 
+          Si tu appuies sur le bouton @ ( ou si tu redimensionne ton navigateur ), ca la remet en place
         </p>
       </div>
     </div>
@@ -109,7 +112,48 @@
     <div class="container__star" id="starContainer">
     </div>
 
-
+    <section class="container__music">
+      <div class="music__header">
+        <span class="music__titre">music_player</span>
+      </div>
+      <div class="music__content">
+        <audio controls class="music__player">
+          <source src="../ressources/audio/Mozart.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <div class="music__visualizer">
+          <img src="../ressources/images/camera.png" class="img__visualizer">
+        </div>
+        <div class="music__control">
+          <button class="music__button-control" id="music__button-previous">previous</button>
+          <button class="music__button-control" id="music__button-playpause">play</button>
+          <button class="music__button-control" id="music__button-next">next</button>
+        </div>
+        <div class="container__music-category">
+          <div class="music__button-category">
+            <button class="music__button-category-style">
+              <span class="header__button-text music__button-category-text">choisir categorie</span>
+            </button>
+            <div class="music__dropdown-content">
+              <span class="header__dropdown-content-link music__dropdown-content-link" id="link__breakcore">breakcore</span>
+              <span class="header__dropdown-content-link music__dropdown-content-link" id="link__classique">classique</span>
+            </div>
+          </div>
+          
+        </div>
+        <div class="container__music-list">
+          <ul class="music__list">
+            <li class="music__list-item">Mozart.mp3</li>
+            <li class="music__list-item">Beethoven.mp3</li>
+            <li class="music__list-item">Chopin.mp3</li>
+            <li class="music__list-item">Bach.mp3</li>
+            <li class="music__list-item">opk.mp3</li>
+            <li class="music__list-item">azer.mp3</li>
+            <li class="music__list-item">tez.mp3</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
   </div>
   

@@ -7,7 +7,7 @@ function createStar() {
 
     const starHeight = Math.random() * document.documentElement.scrollHeight;
     star.style.top = `${starHeight}px`;
-    star.style.left = '-50px'; // Position initiale à gauche de l'écran
+    star.style.left = '-50px'; // position initiale à gauche
 
     const starSaturation = 0.5 + Math.random() * 2;
 
@@ -16,7 +16,7 @@ function createStar() {
 
     starContainer.appendChild(star);
 
-    const speed = 2 + Math.random() * 3; // Vitesse aléatoire de 2 à 5 pixels par frame
+    const speed = 2 + Math.random() * 3; // vitesse aléatoire
     let positionX = -50;
     let amplitude = 20;
     let frequency = 0.05;
