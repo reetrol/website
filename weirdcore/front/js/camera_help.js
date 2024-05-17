@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+
 const textIntro = document.querySelector('.text__intro');
 const windowSurveillance = document.getElementById('window__surveillance-scene');
 
@@ -34,3 +36,21 @@ function adjustWindowSurveillancePosition() {
   
 window.addEventListener('resize', adjustWindowSurveillancePosition);
 adjustWindowSurveillancePosition(); // exécute la fonction une fois que le document est chargé
+
+
+const textMusic = document.querySelector('.text__music');
+const musicContainer = document.getElementById('container__music');
+
+function adjustMusicContainerPosition() {
+  const textMusicHeight = textMusic.offsetHeight;
+  const textMusicTop = textMusic.offsetTop;
+    if (window.innerWidth <= 647) {
+      musicContainer.style.top = `${textMusicTop + textMusicHeight + 50}px`;
+      musicContainer.style.left= '50%';
+      musicContainer.style.transform= 'translateX(-50%)';
+    } else {
+      musicContainer.style.top = `${textMusicTop + textMusicHeight + 50}px`;
+      musicContainer.style.left= '50%';
+      musicContainer.style.transform= 'translateX(-50%)';
+    }
+}

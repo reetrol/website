@@ -327,6 +327,7 @@ body{
   height:50vh;
   z-index: 99999;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .butterfly {
@@ -349,7 +350,22 @@ body{
 
 .star {
   position: absolute;
+  pointer-events: none;
 }
+
+.text__music {
+  left: 5%;
+  max-width: calc(100% - (5%));
+  top:830px;
+  position: absolute;
+  margin:0;
+  width:70%;
+  font-size: 4vh;
+  color:rgb(0, 0, 0);
+  text-shadow: 2px 2px 0px #fff;
+}
+
+
 
 .container__music {
   position: absolute;
@@ -398,6 +414,7 @@ body{
 }
 
 .music__visualizer{
+  position:relative;
   top:0;
   height: 50%;
   width: 100%;
@@ -405,11 +422,70 @@ body{
   border-bottom:5px #000000 solid;
 }
 
+.music__songname{
+  position:absolute;
+  top:0;
+  width:100%;
+  text-align: center;
+  font-size: 5vh;
+  color:rgb(0, 0, 0);
+  text-shadow: 2px 2px 0px #fff;
+}
+
 .img__visualizer {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+.music__playbar {
+  position:absolute;
+  bottom:5px;
+  left:20%;
+  right:20%;
+}
+
+.music__time-rn{
+  position: absolute;
+  bottom:5px;
+  left:5px;
+  font-size: 5vh;
+  color:rgb(0, 0, 0);
+  text-shadow: 2px 2px 0px #fff;
+}
+
+.music__time-total{
+  position: absolute;
+  bottom:5px;
+  right:5px;
+  font-size: 5vh;
+  color:rgb(0, 0, 0);
+  text-shadow: 2px 2px 0px #fff;
+}
+
+/* Là ces lignes moches c pour afficher / faire disparaitre la barre de progression de la musique */
+.music__visualizer .music__songname,
+.music__visualizer .music__playbar,
+.music__visualizer .music__time-rn,
+.music__visualizer .music__time-total {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.music__visualizer:hover .music__songname,
+.music__visualizer:hover .music__playbar,
+.music__visualizer:hover .music__time-rn,
+.music__visualizer:hover .music__time-total {
+  opacity: 1;
+}
+
+.music__visualizer:not(:hover) .music__songname,
+.music__visualizer:not(:hover) .music__playbar,
+.music__visualizer:not(:hover) .music__time-rn,
+.music__visualizer:not(:hover) .music__time-total {
+  transition-delay: 1s;
+}
+/* J'avais la flemme de le faire dans le JS lol */
 
 .music__control {
   width:100%;

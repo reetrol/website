@@ -112,17 +112,28 @@
     <div class="container__star" id="starContainer">
     </div>
 
+    <p class="text__music">Ici tu peux ecouter mes musiques !!! <br>
+      choisis un genre musical, mets ton casque, et gamberge... <br>
+      tu ^peux ectouer le fameux lapincalinremix par exemple !
+      sinon il yt a des ecxplusivites( nul part ailleurs ) !!!!! 
+    </p>
+
+
     <section class="container__music">
       <div class="music__header">
         <span class="music__titre">music_player</span>
       </div>
       <div class="music__content">
-        <audio controls class="music__player">
+        <audio controls class="music__player" autostart="0" autostart="false" preload ="none">
           <source src="../ressources/audio/Mozart.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
         <div class="music__visualizer">
+          <span class="music__songname">gamberge.mp3</span>
           <img src="../ressources/images/camera.png" class="img__visualizer">
+          <input type="range" value=0 class="music__playbar">
+          <span class="music__time-rn">0:00</span>
+          <span class="music__time-total">2:56</span>
         </div>
         <div class="music__control">
           <button class="music__button-control" id="music__button-previous">previous</button>
@@ -162,6 +173,7 @@
   <script type="module" src="../js/camera_help.js"></script>
   <script type="module" src="../js/draggable_windows.js"></script>
   <!-- <script type="module" src="../js/star_animation.js"></script> -->
+  <script type="module" src="../js/playmusic.js"></script>
 </body>
 
 </html>

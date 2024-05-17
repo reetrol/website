@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var category_button = document.querySelectorAll(".music__button-category-style")
     var dropdown_category = document.querySelectorAll('.music__dropdown-content')
-
-    console.log(category_button)
     
     header__buttons.forEach(function(button) {
         button.addEventListener('click', function(event) {
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
     category_button.forEach(function(button) {
         button.addEventListener('click', function(event) {
             var dropdown_associated = button.nextElementSibling;
-            console.log(button)
             dropdown_associated.classList.toggle('show');
 
             dropdown_category.forEach(function(dropdown) {
